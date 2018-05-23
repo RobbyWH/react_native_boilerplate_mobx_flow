@@ -3,9 +3,11 @@ import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Bod
 
 import styles from "./styles";
 export interface Props {
-	navigation: any;
+	navigation: any
 }
+
 export interface State {}
+
 class BlankPage extends React.Component<Props, State> {
 	render() {
 		const param = this.props.navigation.state.params;
@@ -13,6 +15,7 @@ class BlankPage extends React.Component<Props, State> {
 			<Container style={styles.container}>
 				<Header>
 					<Left>
+						<Text>{this.props.bar}</Text>
 						<Button transparent onPress={() => this.props.navigation.goBack()}>
 							<Icon name="ios-arrow-back" />
 						</Button>
